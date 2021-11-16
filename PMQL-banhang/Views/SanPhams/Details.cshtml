@@ -1,0 +1,61 @@
+﻿@model PMQL_banhang.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết sản phẩm </h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Tên sản phẩm</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            <label>Đơn vị tính</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Donvitinh)
+        </dd>
+
+        <dt>
+            <label>Đơn giá</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dongia)
+        </dd>
+
+        <dt>
+            <label>Tên loại sản phẩm </label>
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSP.TenLoaiSP)
+        </dd>
+
+    </dl>
+</div>
+
+<dd>
+    <br />
+    <a class="btn btn-success btn-sm" href="@Url.Action("AddToCart","GioHang",new { MaSP = Model.MaSP })">
+        <span class="glyphicon glyphicon-shopping-cart"></span>Thêm vào giỏ
+    </a>
+    <a class="btn btn-success btn-sm" href="@Url.Action("Index","Home",new { MaSP = Model.MaSP })">
+        Quay lại
+    </a>
+
+</dd>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaSP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

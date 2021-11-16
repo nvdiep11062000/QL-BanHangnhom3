@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PMQL_banhang.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <label>Tên sản phẩm</label>
+        </th>
+        <th>
+            <label>Đơn vị tính</label>
+        </th>
+
+        <th>
+            <label>Đơn giá</label>
+        </th>
+        <th>
+            <label>Tên loại sản phẩm</label>
+        </th>
+
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenSP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Donvitinh)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Dongia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LoaiSP.TenLoaiSP)
+    </td>
+
+
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+    </td>
+</tr>
+}
+
+</table>
