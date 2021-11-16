@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\ChiTietHDsController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -138,12 +139,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111160120149_Create_Table_Account.cs" />
+    <Compile Include="Migrations\202111160120149_Create_Table_Account.Designer.cs">
+      <DependentUpon>202111160120149_Create_Table_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ChiTietHD.cs" />
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\Process\Encrytion.cs" />
+    <Compile Include="Models\Process\StringProcess.cs" />
     <Compile Include="Models\QLbanhangDbContext.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\sysdiagram.cs" />
@@ -215,6 +224,8 @@
     <Content Include="Views\NhanViens\Details.cshtml" />
     <Content Include="Views\NhanViens\Edit.cshtml" />
     <Content Include="Views\NhanViens\Index.cshtml" />
+    <Content Include="Views\Accounts\Register.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -231,6 +242,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202111160120149_Create_Table_Account.resx">
+      <DependentUpon>202111160120149_Create_Table_Account.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

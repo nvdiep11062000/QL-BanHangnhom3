@@ -1,3 +1,4 @@
+using PMQL_banhang.Models.Process;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
@@ -19,6 +20,9 @@ namespace PMQL_banhang.Models
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ChiTietHD> ChiTietHDs { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<StringProcess> StringProcesss { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

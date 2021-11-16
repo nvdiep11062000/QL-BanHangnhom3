@@ -9,7 +9,10 @@ namespace PMQL_banhang.Controllers
 {
     public class HomeController : Controller
     {
+        
         QLbanhangDbContext db = new QLbanhangDbContext();
+
+        [Authorize]
         public ActionResult Index()
         {
             var sanPhams = db.SanPhams.Include(s => s.LoaiSP);
