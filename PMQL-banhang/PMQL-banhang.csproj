@@ -143,11 +143,16 @@
     <Compile Include="Migrations\202111160120149_Create_Table_Account.Designer.cs">
       <DependentUpon>202111160120149_Create_Table_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111161223501_Create_Table_Index.cs" />
+    <Compile Include="Migrations\202111161223501_Create_Table_Index.Designer.cs">
+      <DependentUpon>202111161223501_Create_Table_Index.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ChiTietHD.cs" />
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\index.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\NhanVien.cs" />
@@ -246,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111160120149_Create_Table_Account.resx">
       <DependentUpon>202111160120149_Create_Table_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111161223501_Create_Table_Index.resx">
+      <DependentUpon>202111161223501_Create_Table_Index.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

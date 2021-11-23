@@ -22,6 +22,7 @@ namespace PMQL_banhang.Models
         public virtual DbSet<ChiTietHD> ChiTietHDs { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<StringProcess> StringProcesss { get; set; }
+        public virtual DbSet<index> indexs { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

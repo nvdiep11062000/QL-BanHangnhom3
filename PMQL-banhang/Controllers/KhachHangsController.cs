@@ -14,6 +14,8 @@ namespace PMQL_banhang.Controllers
     {
         private QLbanhangDbContext db = new QLbanhangDbContext();
 
+        [Authorize]
+
         // GET: KhachHangs
         public ActionResult Index()
         {

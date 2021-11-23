@@ -83,3 +83,4 @@ C:\Users\nvdie\source\repos\PMQL-banhang\PMQL-banhang\obj\Debug\PMQL-banhang.dll
 C:\Users\nvdie\source\repos\PMQL-banhang\PMQL-banhang\obj\Debug\PMQL-banhang.pdb
 C:\Users\nvdie\source\repos\PMQL-banhang\PMQL-banhang\obj\Debug\PMQL_banhang.Migrations.Create_Table_Account.resources
 C:\Users\nvdie\source\repos\PMQL-banhang\PMQL-banhang\obj\Debug\PMQL-banhang.csproj.GenerateResource.cache
+C:\Users\nvdie\source\repos\PMQL-banhang\PMQL-banhang\obj\Debug\PMQL_banhang.Migrations.Create_Table_Index.resources
