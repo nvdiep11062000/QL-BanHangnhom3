@@ -14,7 +14,9 @@ namespace PMQL_banhang.Controllers
     {
         private QLbanhangDbContext db = new QLbanhangDbContext();
 
+        [Authorize]
         // GET: LoaiSPs
+
         public ActionResult Index()
         {
             return View(db.LoaiSPs.ToList());

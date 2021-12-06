@@ -1,22 +1,22 @@
 ﻿@model IEnumerable<PMQL_banhang.Models.LoaiSP>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Loại sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Các loại sản phẩm của cửa hàng</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MaLoaiSP)
+            <label>Mã loại sản phẩm</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TenLoaiSP)
+            <label> Loại sản phẩm</label>
         </th>
         <th></th>
     </tr>

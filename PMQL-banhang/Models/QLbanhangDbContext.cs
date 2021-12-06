@@ -21,7 +21,10 @@ namespace PMQL_banhang.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ChiTietHD> ChiTietHDs { get; set; }
         public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<StringProcess> StringProcesss { get; set; }
+        public virtual DbSet<update> updates { get; set; }
+        public virtual DbSet<GioHang> GioHangs { get; set; }
+        public virtual DbSet<test> tests { get; set; }
+        
         public virtual DbSet<index> indexs { get; set; }
 
 

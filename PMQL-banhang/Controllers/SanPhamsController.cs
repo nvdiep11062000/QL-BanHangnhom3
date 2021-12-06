@@ -41,6 +41,7 @@ namespace PMQL_banhang.Controllers
         // GET: SanPhams/Create
         public ActionResult Create()
         {
+
             ViewBag.MaLoaiSP = new SelectList(db.LoaiSPs, "MaLoaiSP", "TenLoaiSP");
             return View();
         }

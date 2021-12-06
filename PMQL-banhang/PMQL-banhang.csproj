@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\ChiTietHDsController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
@@ -147,6 +148,18 @@
     <Compile Include="Migrations\202111161223501_Create_Table_Index.Designer.cs">
       <DependentUpon>202111161223501_Create_Table_Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202112060751375_Initial_Create.cs" />
+    <Compile Include="Migrations\202112060751375_Initial_Create.Designer.cs">
+      <DependentUpon>202112060751375_Initial_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112061531567_Create_Table_Giohang.cs" />
+    <Compile Include="Migrations\202112061531567_Create_Table_Giohang.Designer.cs">
+      <DependentUpon>202112061531567_Create_Table_Giohang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112061723373_test.cs" />
+    <Compile Include="Migrations\202112061723373_test.Designer.cs">
+      <DependentUpon>202112061723373_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\ChiTietHD.cs" />
@@ -161,6 +174,8 @@
     <Compile Include="Models\QLbanhangDbContext.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\test.cs" />
+    <Compile Include="Models\update.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,12 +183,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\W3.CSS" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\.editorconfig" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -231,6 +248,7 @@
     <Content Include="Views\NhanViens\Index.cshtml" />
     <Content Include="Views\Accounts\Register.cshtml" />
     <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -254,6 +272,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111161223501_Create_Table_Index.resx">
       <DependentUpon>202111161223501_Create_Table_Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112060751375_Initial_Create.resx">
+      <DependentUpon>202112060751375_Initial_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112061531567_Create_Table_Giohang.resx">
+      <DependentUpon>202112061531567_Create_Table_Giohang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112061723373_test.resx">
+      <DependentUpon>202112061723373_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

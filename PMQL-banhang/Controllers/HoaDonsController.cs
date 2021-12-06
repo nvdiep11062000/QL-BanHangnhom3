@@ -13,7 +13,7 @@ namespace PMQL_banhang.Controllers
     public class HoaDonsController : Controller
     {
         private QLbanhangDbContext db = new QLbanhangDbContext();
-
+        [Authorize]
         // GET: HoaDons
         public ActionResult Index()
         {

@@ -22,7 +22,7 @@ namespace PMQL_banhang.Models
         [StringLength(50)]
         public string NgayLapHD { get; set; }
 
-        public DateTime? NgayGiaoHang { get; set; }
+        public string NgayGiaoHang { get; set; }
 
         public virtual ChiTietHD ChiTietHD { get; set; }
 

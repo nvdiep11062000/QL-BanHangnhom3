@@ -1,31 +1,31 @@
 ﻿@model IEnumerable<PMQL_banhang.Models.HoaDon>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Hóa đơn bán hàng";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Danh sách hóa đơn</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Tạo hóa đơn", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ChiTietHD.MaSP)
+            <label>Mã hóa đơn</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.KhachHang.TenKH)
+            <label>Ngày lập hóa đơn</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NhanVien.HoNV)
+            <label>Ngày giao hàng</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayLapHD)
+            <label>Tên khách hàng</label>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NgayGiaoHang)
+            <label> Nhân viên</label>
         </th>
         <th></th>
     </tr>
@@ -33,13 +33,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ChiTietHD.MaSP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NhanVien.HoNV)
+            <a href="@Url.Action("Index","ChiTietHDs", new { MaHD = item.MaHD})">
+                @Html.DisplayFor(modelItem => item.MaHD)
+            </a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NgayLapHD)
@@ -48,9 +44,16 @@
             @Html.DisplayFor(modelItem => item.NgayGiaoHang)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaHD }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaHD }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaHD })
+            @Html.DisplayFor(modelItem => item.KhachHang.TenKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVien.HoNV)
+            @Html.DisplayFor(modelItem => item.NhanVien.Ten)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.MaHD }) |
+            @Html.ActionLink("Xem chi tiết", "Details", new { id=item.MaHD }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MaHD })
         </td>
     </tr>
 }

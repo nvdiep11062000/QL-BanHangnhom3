@@ -7,13 +7,15 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PMQL_banhang.Models;
+using PMQL_banhang.Models.Process;
 
 namespace PMQL_banhang.Controllers
 {
     public class NhanViensController : Controller
     {
         private QLbanhangDbContext db = new QLbanhangDbContext();
-
+        private StringProcess strPro = new StringProcess();
+        [Authorize]
         // GET: NhanViens
         public ActionResult Index()
         {
@@ -56,6 +58,7 @@ namespace PMQL_banhang.Controllers
             }
 
             return View(nhanVien);
+
         }
 
         // GET: NhanViens/Edit/5
